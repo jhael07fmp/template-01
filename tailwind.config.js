@@ -8,6 +8,9 @@ export default {
           800: "#001529",
         },
       },
+      screens: {
+        "4xl": "2000px",
+      },
     },
   },
   plugins: [],

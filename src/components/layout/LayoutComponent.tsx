@@ -19,17 +19,22 @@ import { MdCreditScore } from "react-icons/md";
 import { LuClipboardList } from "react-icons/lu";
 import { MdOutlineQueryStats } from "react-icons/md";
 import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
-import { RiMenu2Line } from "react-icons/ri";
 import Sidebar from "./Sidebar";
+import Navbar from "./Navbar";
+import { ReactNode } from "react";
 
-const LayoutComponent = () => {
+const LayoutComponent = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="min-h-screen bg-slate-100 fixed ">
+    <div className="min-h-screen bg-slate-100 fixed w-full">
       <Sidebar items={menuItems as ItemType<MenuItemType>[]} />
-      <div className="ml-[15.2rem] w-screen h-screen ">
-        <div className="bg-slate-50 w-full p-5 border-b shadow-sm flex justify-between items-center">
-          <RiMenu2Line className="text-xl" />
-          <div></div>
+      <div className="w-full h-screen">
+        <Navbar />
+        <div className="w-full ml-[14.5rem]  ">
+          <div className="flex  justify-center  w-10/12 4xl:mx-auto">
+            <div className="flex mx-auto border max-w-7xl  w-11/12 4xl:w-full">
+              {children}
+            </div>
+          </div>
         </div>
       </div>
     </div>
