@@ -107,7 +107,7 @@ const InputCustom = (props: InputCustomType) => {
 
     case "text":
       return (
-        <InputWrapper isVisible={isVisible}>
+        <>
           <LabelForInput label={label} required={rules} />
           <input
             type={type ? type : "text"}
@@ -117,7 +117,7 @@ const InputCustom = (props: InputCustomType) => {
             className="input-basic"
             {...register!(name, rules)}
           />
-        </InputWrapper>
+        </>
       );
     case "password":
       return (
