@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import UploadInput from "./UploadInput";
 import { AiOutlineEye } from "react-icons/ai";
 import SelectCustom from "./SelectCustom";
+import BasicInput from "./BasicInput";
 
 /* eslint-disable @typescript-eslint/ban-types */
 
@@ -106,19 +107,7 @@ const InputCustom = (props: InputCustomType) => {
       );
 
     case "text":
-      return (
-        <>
-          <LabelForInput label={label} required={rules} />
-          <input
-            type={type ? type : "text"}
-            value={defaultValue}
-            disabled={disabled}
-            placeholder={placeholder}
-            className="input-basic"
-            {...register!(name, rules)}
-          />
-        </>
-      );
+      return <BasicInput {...props} />;
     case "password":
       return (
         <InputWrapper isVisible={isVisible}>
@@ -135,19 +124,7 @@ const InputCustom = (props: InputCustomType) => {
       );
 
     case "number":
-      return (
-        <InputWrapper isVisible={isVisible}>
-          <LabelForInput label={label} required={rules} />
-          <input
-            type={type ? type : "text"}
-            disabled={disabled}
-            placeholder={placeholder}
-            step=".01"
-            className="input-basic"
-            {...register!(name, rules)}
-          />
-        </InputWrapper>
-      );
+      return <BasicInput {...props} />;
 
     case "upload":
       return (
@@ -192,7 +169,7 @@ const InputCustom = (props: InputCustomType) => {
 
 export default InputCustom;
 
-const InputWrapper = ({
+export const InputWrapper = ({
   children,
   isVisible = true,
 }: {
@@ -202,7 +179,7 @@ const InputWrapper = ({
   return <>{isVisible ? <div className="w-full min-w-[18rem]">{children}</div> : null}</>;
 };
 
-const LabelForInput = ({ label, required }: { label: string; required: any }) => (
+export const LabelForInput = ({ label, required }: { label: string; required: any }) => (
   <p className="mb-2 font-sans text-base text-slate-500 flex gap-2">
     {label} {required?.required?.value && <span className="text-red-500">*</span>}{" "}
   </p>
