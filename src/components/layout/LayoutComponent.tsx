@@ -25,13 +25,13 @@ import { ReactNode } from "react";
 
 const LayoutComponent = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="min-h-screen bg-slate-100 fixed w-full">
+    <div className="h-screen bg-slate-100 fixed w-full">
       <Sidebar items={menuItems as ItemType<MenuItemType>[]} />
       <div className="w-full h-screen">
         <Navbar />
-        <div className="w-full ml-[14.5rem]  ">
-          <div className="flex  justify-center  w-10/12 4xl:mx-auto">
-            <div className="flex mx-auto border max-w-7xl  w-11/12 4xl:w-full">
+        <div className="w-full ml-[10.6rem]">
+          <div className="flex  justify-center w-[89%] 4xl:mx-auto">
+            <div className="flex mx-auto max-w-7xl  w-11/12 4xl:w-full overflow-y-scroll max-h-[90vh] ">
               {children}
             </div>
           </div>

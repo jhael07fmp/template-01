@@ -12,7 +12,7 @@
 }
 
 ::-webkit-scrollbar {
-  @apply w-1.5 h-1.5 bg-[#00000041];
+  @apply w-1.5 h-1.5;
 }
 
 ::-webkit-scrollbar-thumb {

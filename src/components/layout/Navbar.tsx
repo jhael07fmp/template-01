@@ -6,7 +6,7 @@ import { RiMenu2Line } from "react-icons/ri";
 
 const Navbar = () => {
   return (
-    <div className="ml-[15rem] bg-slate-50 p-5 border-b shadow-sm flex justify-between items-center text-slate-600">
+    <div className="ml-[12.8rem] bg-slate-50 p-5 border-b shadow-sm flex justify-between items-center text-slate-600">
       <RiMenu2Line className="text-xl" />
       <div className="flex items-center gap-x-6 w-fit ">
         <CiMoneyBill className="text-2xl " />
