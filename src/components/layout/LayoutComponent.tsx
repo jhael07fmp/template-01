@@ -31,7 +31,7 @@ const LayoutComponent = ({ children }: { children: ReactNode }) => {
         <Navbar />
         <div className="w-full ml-[10.6rem]">
           <div className="flex  justify-center w-[89%] 4xl:mx-auto">
-            <div className="flex mx-auto max-w-7xl  w-11/12 4xl:w-full overflow-y-scroll max-h-[90vh] ">
+            <div className="flex mx-auto max-w-7xl  w-11/12 4xl:w-full overflow-y-scroll max-h-[90vh] mt-2 ">
               {children}
             </div>
           </div>

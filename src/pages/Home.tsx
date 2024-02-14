@@ -5,21 +5,21 @@ import LayoutComponent from "../components/layout/LayoutComponent";
 const Home = () => {
   return (
     <LayoutComponent>
-      <div className="flex gap-x-4 w-full h-full">
-        <div className="w-7/12  py-4 flex flex-col gap-y-5 h-[87vh] ">
+      <div className="flex gap-x-4 w-full h-full ">
+        <div className="w-7/12  pb-4 flex flex-col gap-y-5 h-[87vh] ">
           <div className=" min-h-[8rem]">
             <AdsCard />
           </div>
           <CustomerCard />
           <PurchasingCard />
         </div>
-        <div className="w-full  py-4 ">
+        <div className="w-full  pb-4 ">
           <div className="flex w-full gap-x-2">
             <div className="min-h-[8rem] bg-white rounded-md border shadow-md w-full"></div>
             <div className="min-h-[8rem] bg-white rounded-md border shadow-md w-full"></div>
           </div>
         </div>
-        <div className="w-7/12 py-4 flex flex-col gap-y-5 h-[87vh]">
+        <div className="w-7/12 pb-4 flex flex-col gap-y-5 h-[87vh]">
           <CustomerCard />
           <ComprobantesStatus />
         </div>
