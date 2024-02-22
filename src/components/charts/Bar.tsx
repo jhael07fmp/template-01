@@ -1,9 +1,10 @@
 import { ApexOptions } from "apexcharts";
 import ReactApexChart from "react-apexcharts";
 
-export function BarChart() {
+export function BarChart({ height }: { height?: number }) {
   const chartOptions: ApexOptions = {
     chart: {
+      width: "100%",
       animations: {
         enabled: true,
         easing: "easeinout",
@@ -43,12 +44,12 @@ export function BarChart() {
   };
 
   return (
-    <div>
+    <div className="w-full overflow-hidden">
       <ReactApexChart
         options={chartOptions}
         series={chartOptions.series}
         type="bar"
-        height={180}
+        height={height || 180}
         width={"100%"}
       />
     </div>

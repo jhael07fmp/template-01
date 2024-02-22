@@ -10,6 +10,7 @@ export default {
       },
       screens: {
         "4xl": "2000px",
+        "18pg": "1400px",
       },
     },
   },

@@ -22,16 +22,26 @@ import { ItemType, MenuItemType } from "antd/es/menu/hooks/useItems";
 import Sidebar from "./Sidebar";
 import Navbar from "./Navbar";
 import { ReactNode } from "react";
+import { useContextProvider } from "../../context/ContextProvider";
 
 const LayoutComponent = ({ children }: { children: ReactNode }) => {
+  const { isSideBarOpen } = useContextProvider();
   return (
-    <div className="h-screen bg-slate-100 fixed w-full">
-      <Sidebar items={menuItems as ItemType<MenuItemType>[]} />
+    <div className="h-screen bg-slate-100 fixed w-full overflow-y-scroll">
+      <Sidebar inlineCollapsed={isSideBarOpen} items={menuItems as ItemType<MenuItemType>[]} />
       <div className="w-full h-screen">
         <Navbar />
-        <div className="w-full ml-[10.6rem]">
-          <div className="flex  justify-center w-[89%] 4xl:mx-auto">
-            <div className="flex mx-auto max-w-7xl  w-11/12 4xl:w-full overflow-y-scroll max-h-[90vh] mt-2 ">
+        <div
+          className={`w-full ${
+            isSideBarOpen ? "xl:pl-[3.5rem]" : "xl:pl-[6rem]"
+          } transition-all duration-700 justify-center flex`}
+        >
+          <div className={`flex justify-center w-full 4xl:mx-auto`}>
+            <div
+              className={`flex mx-auto  w-full xl:w-11/12 4xl:w-full max-h-[90vh] mt-2 max-w-7xl ${
+                isSideBarOpen ? "pl-0" : "pl-20"
+              }`}
+            >
               {children}
             </div>
           </div>
