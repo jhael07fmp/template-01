@@ -33,13 +33,13 @@ const LayoutComponent = ({ children }: { children: ReactNode }) => {
         <Navbar />
         <div
           className={`w-full ${
-            isSideBarOpen ? "xl:pl-[3.5rem]" : "xl:pl-[6rem]"
+            isSideBarOpen ? "xl:pl-[3.5rem] 18pg:pl-[3rem]" : "xl:pl-[6rem] 18pg:pl-[5.6rem]"
           } transition-all duration-700 justify-center flex`}
         >
           <div className={`flex justify-center w-full 4xl:mx-auto`}>
             <div
               className={`flex mx-auto  w-full xl:w-11/12 4xl:w-full max-h-[90vh] mt-2 max-w-7xl ${
-                isSideBarOpen ? "pl-0" : "pl-20"
+                isSideBarOpen ? "pl-0 " : "pl-20"
               }`}
             >
               {children}

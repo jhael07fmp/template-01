@@ -14,8 +14,8 @@ const Home = () => {
   return (
     <LayoutComponent>
       <div className="grid xl:flex xl:flex-col xl:flex-wrap gap-x-2 w-full max-h-[90vh] max-w-7xl mx-auto ">
-        <div className="w-full 18pg:w-80 xl:w-64 pb-4 flex flex-col gap-y-5 xl:h-[87vh] transition-all ">
-          <div className="grid sm:flex xl:hidden w-11/12 mx-auto gap-y-4 xl:w-full gap-x-2 ">
+        <div className="w-full 18pg:w-80 xl:w-64 1.5xl:w-80  pb-4 flex flex-col gap-y-5 xl:h-[87vh] transition-all ">
+          <div className="grid sm:flex xl:hidden w-11/12 mx-auto gap-y-4 xl:w-full gap-x-2  ">
             <InfoCard navigateTo="/" label="Total de Facturas" value={10000} color="#112640" />
             <InfoCard navigateTo="/" label="Monto Total Emitido" value={0} color="#5113c4" />
           </div>
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
         <div
           className={`w-full gap-y-5 flex flex-col transition-all duration-500  pb-4 ${
-            isSideBarOpen ? "xl:w-[39rem]" : "xl:w-[32rem]"
+            isSideBarOpen ? "xl:w-[39rem] 18pg:w-[43rem]" : "xl:w-[32rem] 18pg:w-[35.8rem]"
           }`}
         >
           <div className="hidden xl:flex w-11/12 mx-auto gap-y-4 xl:w-full gap-x-2 ">
@@ -44,7 +44,7 @@ const Home = () => {
             <BarChart height={300} />
           </div>
         </div>
-        <div className="w-full pb-4 flex flex-col gap-y-5 xl:h-[87vh] xl:w-[16.5rem] 18pg:w-72">
+        <div className="w-full pb-4 flex flex-col gap-y-5 1.5xl:w-[17.6rem] xl:h-[87vh] xl:w-[16.5rem] 18pg:w-72">
           <CustomerCard />
           <ComprobantesStatus />
         </div>
